@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Vamia.Web.Tests")]
+[assembly: AssemblyTitle("Vamia.Core")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Vamia.Web.Tests")]
+[assembly: AssemblyProduct("Vamia.Core")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3bee796a-abee-4f14-994a-fa01f4d62ee2")]
+[assembly: Guid("a6d00a24-988a-4451-b504-024d0d421263")]
 
 // Version information for an assembly consists of the following four values:
 //

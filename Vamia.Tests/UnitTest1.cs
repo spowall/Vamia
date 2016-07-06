@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Vamia.Web.Tests
+namespace Vamia.Tests
 {
     [TestClass]
     public class UnitTest1

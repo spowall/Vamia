@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vamia", "Vamia\Vamia.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vamia.Tests", "Vamia.Tests\Vamia.Tests.csproj", "{2F907898-BF05-4FF8-A35A-44ADCB37B0A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vamia.Domain", "Vamia.Domain\Vamia.Domain.csproj", "{8B7CFBC6-E499-4424-B2F3-07C25C31DB8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vamia.Console", "Vamia.Console\Vamia.Console.csproj", "{546B2468-B31E-4D60-ABA3-436E0A360AC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{2F907898-BF05-4FF8-A35A-44ADCB37B0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F907898-BF05-4FF8-A35A-44ADCB37B0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F907898-BF05-4FF8-A35A-44ADCB37B0A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B7CFBC6-E499-4424-B2F3-07C25C31DB8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B7CFBC6-E499-4424-B2F3-07C25C31DB8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B7CFBC6-E499-4424-B2F3-07C25C31DB8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B7CFBC6-E499-4424-B2F3-07C25C31DB8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{546B2468-B31E-4D60-ABA3-436E0A360AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{546B2468-B31E-4D60-ABA3-436E0A360AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{546B2468-B31E-4D60-ABA3-436E0A360AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{546B2468-B31E-4D60-ABA3-436E0A360AC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

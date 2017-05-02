@@ -12,6 +12,6 @@ namespace Vamia.Domain.Entities
         public string Email { get; set; }
         public string Password { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
-        public virtual IEnumerable<CartItem> Items { get; set; }
+        public virtual ICollection<CartItem> Items { get; set; }
     }
 }

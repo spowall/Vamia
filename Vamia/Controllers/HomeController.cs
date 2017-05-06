@@ -11,7 +11,7 @@ namespace Vamia.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return Json(new { greeting = "Hello", target = "World" }, JsonRequestBehavior.AllowGet);
+            return View();
         }
     }
 }

@@ -1,0 +1,8 @@
+{
+  "name": "vamia",
+  "private": true,
+  "dependencies": {
+    "lumen": "bootlumen#*",
+    "bootstrap": "^3.3.7"
+  }
+}

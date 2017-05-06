@@ -47,25 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataContext.cs" />
-    <Compile Include="Entities\CartItem.cs" />
-    <Compile Include="Entities\Order.cs" />
-    <Compile Include="Entities\OrderItem.cs" />
-    <Compile Include="Entities\Product.cs" />
-    <Compile Include="Entities\User.cs" />
+    <Compile Include="Managers\CartManager.cs" />
     <Compile Include="Managers\InventoryManager.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\UserModel.cs" />
-    <Compile Include="Models\CartModel.cs" />
-    <Compile Include="Models\ItemModel.cs" />
-    <Compile Include="Models\OrderModel.cs" />
-    <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\InventoryRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vamia.Data\Vamia.Data.csproj">
+      <Project>{358fbed9-a8dd-443b-8c65-c2d866713960}</Project>
+      <Name>Vamia.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vamia.Models\Vamia.Models.csproj">
+      <Project>{c0127c10-18cf-4ed9-9dc0-cb9e01ac427d}</Project>
+      <Name>Vamia.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

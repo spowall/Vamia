@@ -61,6 +61,10 @@
       <Project>{8b7cfbc6-e499-4424-b2f3-07c25c31db8e}</Project>
       <Name>Vamia.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Vamia.Models\Vamia.Models.csproj">
+      <Project>{c0127c10-18cf-4ed9-9dc0-cb9e01ac427d}</Project>
+      <Name>Vamia.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vamia.Domain.Models;
-using Vamia.Domain.Repositories;
+using Vamia.Models;
+using Vamia.Data.Repositories;
+using Vamia.Data;
 
 namespace Vamia.Domain.Managers
 {
@@ -12,6 +13,12 @@ namespace Vamia.Domain.Managers
     {
         private InventoryRepository _inventory;
 
+        public InventoryManager()
+        {
+            DataContext context = new DataContext();
+            _inventory = new InventoryRepository(context);
+
+        }
         public InventoryManager(InventoryRepository inventory)
         {
             _inventory = inventory;

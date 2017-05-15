@@ -98,6 +98,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -122,6 +127,8 @@
     <Content Include=".bowerrc" />
     <Content Include="bower.json" />
     <Content Include="Views\Shared\_Navbar.cshtml" />
+    <Content Include="Views\Shared\_ItemPartialView.cshtml" />
+    <Content Include="Views\Shared\_ItemListPartialView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -131,7 +138,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vamia.Domain\Vamia.Domain.csproj">
+      <Project>{8B7CFBC6-E499-4424-B2F3-07C25C31DB8E}</Project>
+      <Name>Vamia.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vamia.Models\Vamia.Models.csproj">
+      <Project>{c0127c10-18cf-4ed9-9dc0-cb9e01ac427d}</Project>
+      <Name>Vamia.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

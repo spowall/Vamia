@@ -55,6 +55,10 @@
     <Compile Include="Entities\OrderItem.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Migrations\201705131451489_firstrun.cs" />
+    <Compile Include="Migrations\201705131451489_firstrun.Designer.cs">
+      <DependentUpon>201705131451489_firstrun.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CartRepository.cs" />
@@ -69,6 +73,11 @@
       <Project>{c0127c10-18cf-4ed9-9dc0-cb9e01ac427d}</Project>
       <Name>Vamia.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705131451489_firstrun.resx">
+      <DependentUpon>201705131451489_firstrun.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

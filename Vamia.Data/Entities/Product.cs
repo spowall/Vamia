@@ -14,6 +14,7 @@ namespace Vamia.Data.Entities
         public string Category { get; set; }
         public decimal Amount { get; set; }
         public int Quantity { get; set; }
+        public string PictureURL { get; set; }
         public virtual ICollection<OrderItem> OrderItems { get; set; }
         public virtual ICollection<CartItem> CartItems { get; set; }
     }

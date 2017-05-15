@@ -31,7 +31,8 @@ namespace Vamia.Data.Repositories
                             Category = product.Category,
                             Description = product.Description,
                             Name = product.Name,
-                            ProductId = product.ProductId
+                            ProductId = product.ProductId,
+                            PictureURL = product.PictureURL
                         };
 
             return query.ToArray();

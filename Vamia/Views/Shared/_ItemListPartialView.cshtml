@@ -1,0 +1,6 @@
+﻿@model IEnumerable<Vamia.Models.ProductModel>
+
+@foreach (var product in Model)
+{
+    @Html.Partial("_ItemPartialView", product)
+}

@@ -17,10 +17,18 @@ namespace Vamia.Controllers
         }
 
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index(string search)
         {
-            var products = _inventoryManager.GetProducts();
-            return View(products);
+            if (string.IsNullOrEmpty(search))
+            {
+                var products = _inventoryManager.GetProducts();
+                return View(products);
+            }
+            else
+            {
+                var products = _inventoryManager.Find(search);
+                return View(products);
+            }
         }
     }
 }

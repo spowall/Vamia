@@ -11,6 +11,7 @@ namespace Vamia
     {
         protected void Application_Start()
         {
+            DatabaseConfig.MigrateDatabase();
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }

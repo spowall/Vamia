@@ -108,8 +108,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\DatabaseConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -128,7 +130,7 @@
     <Content Include="bower.json" />
     <Content Include="Views\Shared\_Navbar.cshtml" />
     <Content Include="Views\Shared\_ItemPartialView.cshtml" />
-    <Content Include="Views\Shared\_ItemListPartialView.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -140,6 +142,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Vamia.Data\Vamia.Data.csproj">
+      <Project>{358FBED9-A8DD-443B-8C65-C2D866713960}</Project>
+      <Name>Vamia.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Vamia.Domain\Vamia.Domain.csproj">
       <Project>{8B7CFBC6-E499-4424-B2F3-07C25C31DB8E}</Project>
       <Name>Vamia.Domain</Name>

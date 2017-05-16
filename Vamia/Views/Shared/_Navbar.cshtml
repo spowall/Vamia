@@ -10,9 +10,9 @@
     <div class="navbar-collapse collapse" style="padding-left:400px;">
         <ul class="nav navbar-nav"></ul>
 
-        <form class="navbar-form navbar-left" role="search">
+        <form action="@Url.Action("index", "home")" class="navbar-form navbar-left" role="search">
             <div class="form-group">
-                <input id="searchText" class="form-control" placeholder="product" type="text">
+                <input id="search" name="search" class="form-control" placeholder="product" type="text">
             </div>
             <button type="submit" class="btn btn-default">Search</button>
         </form>

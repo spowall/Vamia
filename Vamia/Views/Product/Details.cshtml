@@ -1,0 +1,14 @@
+﻿@model Vamia.Models.ProductModel
+@{
+    ViewBag.Title = "Details";
+}
+
+@if(Model == null)
+{
+    <h2 class="text-center" style="margin-top:200px">Product Not Found</h2>
+}
+else
+{
+    <h2>@Model.Name</h2>
+    @Html.DisplayFor(m => m)
+}

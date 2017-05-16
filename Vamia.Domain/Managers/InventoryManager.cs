@@ -24,9 +24,20 @@ namespace Vamia.Domain.Managers
             _inventory = inventory;
         }
 
+        public ProductModel FindProduct(int id)
+        {
+            return _inventory.FindProduct(id);
+        }
+
         public List<ProductModel> GetProducts()
         {
             var products = _inventory.GetProducts();
+            return products.ToList();
+        }
+
+        public List<ProductModel> Find(string search)
+        {
+            var products = _inventory.FindProduct(search);
             return products.ToList();
         }
     }

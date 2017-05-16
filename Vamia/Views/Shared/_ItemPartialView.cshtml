@@ -1,10 +1,11 @@
 ﻿@model Vamia.Models.ProductModel
+<div class="product">
+    <a href="@Url.Action("details", "product", new { id = Model.ProductId })">
 
-<div class="col-md-3" style="width:150px;border-width:2px;border-color:gray">
-    <a href="/details/@Model.ProductId">
-        <div class="lead">@Model.Name</div> <div class="h5">@Model.Description</div>
         <div>
-            <img src="@Model.PictureURL" data-src="@Model.PictureURL" class="img-responsive">
+            <img src="@Model.PictureURL" data-src="@Model.PictureURL" style="height:50px">
         </div>
+        <div class="lead">@Model.Name</div> 
+        <div class="description">@Model.Description</div>
     </a>
 </div>

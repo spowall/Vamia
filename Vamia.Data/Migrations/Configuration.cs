@@ -5,7 +5,7 @@ namespace Vamia.Data.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Vamia.Data.DataContext>
+    public sealed class Configuration : DbMigrationsConfiguration<Vamia.Data.DataContext>
     {
         public Configuration()
         {

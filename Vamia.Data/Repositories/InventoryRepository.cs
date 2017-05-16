@@ -37,5 +37,41 @@ namespace Vamia.Data.Repositories
 
             return query.ToArray();
         }
+
+        public ProductModel FindProduct(int id)
+        {
+            var query = from product in _context.Products
+                        where product.ProductId == id
+                        select new ProductModel
+                        {
+                            Price = product.Amount,
+                            Category = product.Category,
+                            Description = product.Description,
+                            Name = product.Name,
+                            ProductId = product.ProductId,
+                            PictureURL = product.PictureURL
+                        };
+
+            return query.FirstOrDefault();
+        }
+
+        public ProductModel[] FindProduct(string search)
+        {
+            var query = from product in _context.Products
+                        where product.Name.Contains(search)
+                        || product.Description.Contains(search)
+                        || product.Category.Contains(search)
+                        select new ProductModel
+                        {
+                            Price = product.Amount,
+                            Category = product.Category,
+                            Description = product.Description,
+                            Name = product.Name,
+                            ProductId = product.ProductId,
+                            PictureURL = product.PictureURL
+                        };
+
+            return query.ToArray();
+        }
     }
 }

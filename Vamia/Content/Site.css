@@ -22,6 +22,7 @@ body {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    padding-top:15px;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -34,4 +35,20 @@ textarea {
 
 .footer > .container {
     padding: 20px 15px;
+}
+
+.product{
+    text-align:center;
+}
+
+.product a:hover{
+    text-decoration:none;
+}
+
+.product a:hover .description{
+    text-decoration:underline;
+}
+
+.container h2{
+    margin-bottom:50px;
 }

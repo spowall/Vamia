@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vamia", "Vamia\Vamia.csproj", "{B0973B7C-B0EB-4512-859E-3A1A1555E64E}"
 EndProject
@@ -14,8 +14,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vamia.Data", "Vamia.Data\Vamia.Data.csproj", "{358FBED9-A8DD-443B-8C65-C2D866713960}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vamia.Models", "Vamia.Models\Vamia.Models.csproj", "{C0127C10-18CF-4ED9-9DC0-CB9E01AC427D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vamia.Services", "Vamia.Services\Vamia.Services.csproj", "{7DFE86F6-DF28-4BD4-B4C5-6FC10EA2E816}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +45,6 @@ Global
 		{C0127C10-18CF-4ED9-9DC0-CB9E01AC427D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0127C10-18CF-4ED9-9DC0-CB9E01AC427D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0127C10-18CF-4ED9-9DC0-CB9E01AC427D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7DFE86F6-DF28-4BD4-B4C5-6FC10EA2E816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7DFE86F6-DF28-4BD4-B4C5-6FC10EA2E816}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7DFE86F6-DF28-4BD4-B4C5-6FC10EA2E816}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7DFE86F6-DF28-4BD4-B4C5-6FC10EA2E816}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

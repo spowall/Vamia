@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vamia.Data;
+using Vamia.Data.Repositories;
 using Vamia.Domain;
 using Vamia.Domain.Managers;
 using Vamia.Models;
@@ -14,82 +16,76 @@ namespace Vamia.Console
     {
         static void Main(string[] args)
         {
-            //define business manager and repository
-            var inventoryManager = new InventoryManager();
-            var cartManager = new CartManager();
-
-            ConsoleKeyInfo keyPressed = default(ConsoleKeyInfo);
-            do
+            using (var context = new DataContext())
             {
-                WriteLine("1 - List Products");
-                WriteLine("2 - Display Cart Items");
-                WriteLine("3 - Add Item to Cart");
-                WriteLine("4 - Place Order");
-                WriteLine("Press Command.. Q to exit");
+                var inventoryRepo = new InventoryRepository(context);
+                var cartRepo = new InMemoryCartRepository();
 
-                keyPressed = ReadKey();
-                WriteLine("");
+                //define business manager and repository
+                var inventoryManager = new InventoryManager(inventoryRepo);
+                var cartManager = new CartManager(cartRepo, inventoryRepo);
 
-                switch (keyPressed.Key){
-                    case ConsoleKey.D1:
-                        var products = inventoryManager.GetProducts();
-                        foreach (var product in products)
-                        {
-                            WriteLine($"{product.Name} {product.Price}");
-                        }
-                        break;
-                    case ConsoleKey.D2:
-                        WriteLine("Type your userid:");
-                        string input = ReadLine();
-                        int userid = int.Parse(input);
-                        //call the business manager
-                        var cart = cartManager.GetCart(userid);
-                        if ( cart != null)
-                        {
-                            WriteLine($"cart item for user {userid}");
-                            foreach (var item in cart.Items)
+                ConsoleKeyInfo keyPressed = default(ConsoleKeyInfo);
+                do
+                {
+                    WriteLine("1 - List Products");
+                    WriteLine("2 - Display Cart Items");
+                    WriteLine("3 - Add Item to Cart");
+                    WriteLine("4 - Place Order");
+                    WriteLine("Press Command.. Q to exit");
+
+                    keyPressed = ReadKey();
+                    WriteLine("");
+
+                    switch (keyPressed.Key)
+                    {
+                        case ConsoleKey.D1:
+                            //List Products
+                            var products = inventoryManager.GetProducts();
+                            WriteLine("================ INVENTORY ==================");
+                            foreach (var prod in products)
                             {
-                                WriteLine($"{item.Product.Name} {item.Product.Price}");
+                                WriteLine($"{prod.ProductId} - {prod.Name} {prod.Price}");
                             }
-                        }
-                        else
-                        {
-                            WriteLine($"No cart item for user {userid}. Please add item");
-                        }
-                        break;
+                            break;
+                        case ConsoleKey.D2:
+                            //Display Cart Items
+                            var items = cartManager.GetCartItems();
+                            if (items.Any())
+                            {
+                                WriteLine("================ CART ==================");
+                                foreach (var item in items)
+                                {
+                                    WriteLine($"{item.Quantity} - {item.Product.Name} {item.Product.Price}");
+                                }
+                            }
+                            else
+                            {
+                                WriteLine($"No cart item for user Please add item");
+                            }
+                            break;
 
-                    case ConsoleKey.D3:
-                        WriteLine("Specify your user id"); //get userid
-                        string id = ReadLine();
-                        userid = int.Parse(id);
-                        WriteLine("Specify your product id");
-                        string productinput = ReadLine();
-                        int productid = int.Parse(productinput);
+                        case ConsoleKey.D3:
+                            //Add Item to Cart
+                            WriteLine("Specify the Product id"); //get userid
+                            string id = ReadLine();
+                            var productId = int.Parse(id);
+                            bool result = cartManager.AddCartItem(productId);
+                            if (result)
+                            {
+                                WriteLine("item added to cart");
+                            }
+                            else
+                            {
+                                WriteLine("invalid data or error occurred");
+                            }
+                            break;
+                    }
 
-                        //create cartitem object
-                        CartModel cartmodel = new CartModel();
-                        cartmodel.UserId = userid;
-                        cartmodel.Items.Add(new ItemModel
-                        {
-                            ProductId = productid
-                        });
+                    WriteLine(Environment.NewLine);
+                } while (keyPressed.Key != ConsoleKey.Q);
 
-                        bool result = cartManager.AddCartItem(cartmodel);
-                        if (result)
-                        {
-                            WriteLine("item added to cart");
-                        }
-                        else
-                        {
-                            WriteLine("invalid data or error occurred");
-                        }
-                        break;
-                }
-
-                WriteLine(Environment.NewLine);
-            } while (keyPressed.Key != ConsoleKey.Q);
-                
-            
+            }
         }
     }
 }

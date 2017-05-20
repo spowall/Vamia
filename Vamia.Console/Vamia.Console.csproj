@@ -57,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Vamia.Data\Vamia.Data.csproj">
+      <Project>{358FBED9-A8DD-443B-8C65-C2D866713960}</Project>
+      <Name>Vamia.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Vamia.Domain\Vamia.Domain.csproj">
       <Project>{8b7cfbc6-e499-4424-b2f3-07c25c31db8e}</Project>
       <Name>Vamia.Domain</Name>

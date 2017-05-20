@@ -3,12 +3,50 @@
     ViewBag.Title = "Details";
 }
 
-@if(Model == null)
+@if (Model == null)
 {
     <h2 class="text-center" style="margin-top:200px">Product Not Found</h2>
 }
 else
 {
     <h2>@Model.Name</h2>
-    @Html.DisplayFor(m => m)
+
+    <div class="row">
+        <div class="col-md-6">
+            <img src="@Model.PictureURL" style="width:350px; text-align:center" class="img-responsive" />
+        </div>
+        <div class="col-md-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td style="font-weight:bold">Name</td>
+                        <td>@Model.Name</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Price</th>
+                        <td> &#8358; @Model.Price.ToString("N2")</td>
+                    </tr>
+                    <tr>
+                        <th>Category</th>
+                        <td>@Model.Category</td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td>@Model.Description</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <a href="@Url.Action("add", "cart", new { id = Model.ProductId })" class="btn btn-primary">
+                        <i class="fa fa-shopping-cart"></i>
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 }

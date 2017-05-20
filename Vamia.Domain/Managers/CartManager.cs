@@ -1,42 +1,67 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Vamia.Data;
-using Vamia.Data.Entities;
-using Vamia.Data.Repositories;
+using Vamia.Domain.Interface.Repositories;
 using Vamia.Models;
 
 namespace Vamia.Domain.Managers
 {
     public class CartManager
     {
-        private CartRepository _cartRepository;
+        private ICartRepository _cartRepository;
+        private IInventoryRepository _inventoryRepository;
 
-        public CartManager()
-        {
-            DataContext context = new DataContext();
-            _cartRepository = new CartRepository();
-        }
-
-        public CartManager(CartRepository cartRepository)
+        public CartManager(ICartRepository cartRepository, IInventoryRepository inventoryRepository)
         {
             _cartRepository = cartRepository;
+            _inventoryRepository = inventoryRepository;
         }
 
-        public CartModel GetCart(int userid)
+        public List<ItemModel> GetCartItems()
         {
             //validate input
             //check permission
-            return _cartRepository.GetCart(userid);
+            return _cartRepository.GetCartItems();
         }
 
-        public bool AddCartItem(CartModel cartmodel)
+        public bool AddCartItem(int productId)
         {
-            //validate input
-            //check permission
-            return _cartRepository.AddCartItem(cartmodel);
+            //Validate Product Id
+            var product = _inventoryRepository.FindProduct(productId);
+            if (product == null) return false;
+
+            var items = _cartRepository.GetCartItems();
+            var cartItem = items.Where(i => i.ProductId == product.ProductId).FirstOrDefault();
+            if (cartItem == null)
+            {
+                items.Add(new ItemModel
+                {
+                    Product = product,
+                    ProductId = productId,
+                    Quantity = 1
+                });
+            }
+            else
+            {
+                cartItem.Quantity = cartItem.Quantity + 1;
+            }
+
+            _cartRepository.SaveCartItems(items);
+            return true;
+        }
+
+        public void RemoveCartItem(int productId)
+        {
+            var items = _cartRepository.GetCartItems();
+            var cartItem = items.Where(i => i.ProductId == productId).FirstOrDefault();
+            if (cartItem != null)
+            {
+                cartItem.Quantity = cartItem.Quantity - 1;
+                if (cartItem.Quantity >= 0) items.Remove(cartItem);
+                _cartRepository.SaveCartItems(items);
+            }
+
+            //If Product doesn't exist in cart then do nothing
         }
     }
 }

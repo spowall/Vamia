@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\Repositories\ICartRepository.cs" />
+    <Compile Include="Interface\Repositories\IInventoryRepository.cs" />
     <Compile Include="Managers\CartManager.cs" />
     <Compile Include="Managers\InventoryManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -56,10 +58,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Vamia.Data\Vamia.Data.csproj">
-      <Project>{358fbed9-a8dd-443b-8c65-c2d866713960}</Project>
-      <Name>Vamia.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Vamia.Models\Vamia.Models.csproj">
       <Project>{c0127c10-18cf-4ed9-9dc0-cb9e01ac427d}</Project>
       <Name>Vamia.Models</Name>

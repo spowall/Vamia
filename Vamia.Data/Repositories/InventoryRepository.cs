@@ -5,18 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vamia.Data.Entities;
+using Vamia.Domain.Interface.Repositories;
 using Vamia.Models;
 
 namespace Vamia.Data.Repositories
 {
-    public class InventoryRepository
+    public class InventoryRepository: IInventoryRepository
     {
         private DataContext _context;
-
-        public InventoryRepository()
-        {
-            _context = new DataContext();
-        }
 
         public InventoryRepository(DataContext context)
         {

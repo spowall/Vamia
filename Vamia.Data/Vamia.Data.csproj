@@ -57,7 +57,7 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\CartRepository.cs" />
+    <Compile Include="Repositories\InMemoryCartRepository.cs" />
     <Compile Include="Repositories\InventoryRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,6 +65,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Vamia.Domain\Vamia.Domain.csproj">
+      <Project>{8b7cfbc6-e499-4424-b2f3-07c25c31db8e}</Project>
+      <Name>Vamia.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Vamia.Models\Vamia.Models.csproj">
       <Project>{c0127c10-18cf-4ed9-9dc0-cb9e01ac427d}</Project>
       <Name>Vamia.Models</Name>

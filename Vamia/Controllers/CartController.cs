@@ -39,6 +39,13 @@ namespace Vamia.Controllers
             return RedirectToAction("index");
         }
 
+        [Authorize]
+        public ActionResult Checkout()
+        {
+
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();

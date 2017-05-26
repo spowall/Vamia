@@ -12,7 +12,7 @@ namespace Vamia.Data.Entities
         public int UserId { get; set; }
         public DateTime Delivery { get; set; }
 
-        public virtual User User { get; set; }
+        public virtual AppUser User { get; set; }
         public virtual ICollection<OrderItem> Items { get; set; }
         
     }

@@ -9,7 +9,7 @@ namespace Vamia.Data.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = true; 
         }
 
         protected override void Seed(Vamia.Data.DataContext context)
@@ -28,7 +28,7 @@ namespace Vamia.Data.Migrations
             //
 
             //users
-            context.Users.AddOrUpdate(u => u.Email, new[] {
+            /*context.Users.AddOrUpdate(u => u.Email, new[] {
                 new Entities.User
                 {
                     Email = "k@k.com", Password="password"
@@ -41,7 +41,7 @@ namespace Vamia.Data.Migrations
                 {
                     Email = "a@a.com", Password="password"
                 }
-                });
+                });*/
 
             //products
             context.Products.AddOrUpdate(e => e.Name, 

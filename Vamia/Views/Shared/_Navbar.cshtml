@@ -24,39 +24,48 @@
                 @if (User.Identity.IsAuthenticated)
                 {
                     <span>Welcome</span> @User.Identity.Name
-                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li style="padding-left:5px;">
+                            <div>
+                                <div>Your profile <a href="/auth/logout">logout</a></div>                                
+                            </div>
+                        </li>
+                    </ul>
+
                 }
-                else {
+                else
+                {
                     <span>Your Account</span>
-                 }
+                    <ul class="dropdown-menu" role="menu">
+                        <li style="padding-left:5px;">
+                            <div>
+                                <div class="sign-up">New customer? <a href="/auth/register">Sign up</a></div>
+                                <div>
+                                    <form id="loginform" action="/auth/login" method="post" class="form-horizontal">
+                                        <div class="form-group">
+                                            <div class="col-lg-10">
+                                                <input class="form-control" id="Username" name="Username" placeholder="username" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-lg-10">
+                                                <input class="form-control" id="Password" name="Password" placeholder="Password" type="password">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-lg-10 col-lg-offset-2">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                }
 
                 </a>
-                <ul class="dropdown-menu" role="menu">
-                    <li style="padding-left:5px;">
-                        <div>
-                            <div class="sign-up">New customer? <a href="/account/create">Sign up</a></div> 
-                            <div>
-                                <form id="loginform" action="/auth/login" method="post"  class="form-horizontal">
-                                    <div class="form-group">
-                                        <div class="col-lg-10">
-                                            <input class="form-control" id="Username" name="Username" placeholder="username" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-lg-10">
-                                            <input class="form-control" id="Password" name="Password" placeholder="Password" type="password">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-lg-10 col-lg-offset-2">
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                
             </li>
             <li>
                 <a href="#"><i style="font-size:20px;" class="fa fa-shopping-cart"></i>Cart</a>

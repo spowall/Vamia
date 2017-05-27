@@ -9,7 +9,9 @@ namespace Vamia.Data.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true; 
+            //DO NOT DO ANY OF THIS IN LIVE APPLICATIONS
+            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(Vamia.Data.DataContext context)

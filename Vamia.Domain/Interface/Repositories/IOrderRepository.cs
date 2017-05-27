@@ -7,10 +7,9 @@ using Vamia.Models;
 
 namespace Vamia.Domain.Interface.Repositories
 {
-    public interface ICartRepository
+    public interface IOrderRepository
     {
-        List<ItemModel> GetCartItems();
-        void SaveCartItems(List<ItemModel> items);
-        void Clear();
+        UserModel FetchUserById(string userId);
+        OrderModel SaveOrder(OrderModel order);
     }
 }

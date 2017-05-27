@@ -68,7 +68,14 @@
                 
             </li>
             <li>
-                <a href="#"><i style="font-size:20px;" class="fa fa-shopping-cart"></i>Cart</a>
+                @{ 
+                    var items = Session["Cart"] as List<Vamia.Models.ItemModel>;
+                    var count = 0;
+                    if (items != null) {
+                        count = items.Select(i => i.Quantity).Sum();
+                    }
+                }
+                <a href="@Url.Action("index", "cart")"><i style="font-size:20px;" class="fa fa-shopping-cart"></i>Cart @(count == 0? "": "(" + count + ")")</a>
             </li>
             
             @if (User.Identity.IsAuthenticated)

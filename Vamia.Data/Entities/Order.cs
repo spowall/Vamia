@@ -9,11 +9,11 @@ namespace Vamia.Data.Entities
     public class Order
     {
         public int OrderId { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public DateTime Delivery { get; set; }
 
         public virtual AppUser User { get; set; }
-        public virtual ICollection<OrderItem> Items { get; set; }
+        public virtual ICollection<OrderItem> Items { get; set; } = new HashSet<OrderItem>();
         
     }
 }

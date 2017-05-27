@@ -49,8 +49,10 @@
   <ItemGroup>
     <Compile Include="Interface\Repositories\ICartRepository.cs" />
     <Compile Include="Interface\Repositories\IInventoryRepository.cs" />
+    <Compile Include="Interface\Repositories\IOrderRepository.cs" />
     <Compile Include="Managers\CartManager.cs" />
     <Compile Include="Managers\InventoryManager.cs" />
+    <Compile Include="Managers\OrderManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

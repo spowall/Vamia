@@ -13,6 +13,11 @@ namespace Vamia.Data.Repositories
     {
         private List<ItemModel> _items = new List<ItemModel>();
 
+        public void Clear()
+        {
+            _items = new List<ItemModel>();
+        }
+
         public List<ItemModel> GetCartItems()
         {
             return _items;

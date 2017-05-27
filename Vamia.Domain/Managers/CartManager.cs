@@ -63,5 +63,10 @@ namespace Vamia.Domain.Managers
 
             //If Product doesn't exist in cart then do nothing
         }
+
+        public void Clear()
+        {
+            _cartRepository.Clear();
+        }
     }
 }

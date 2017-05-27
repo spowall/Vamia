@@ -9,6 +9,11 @@ namespace Vamia.Utils
 {
     public class SessionRepository : ICartRepository
     {
+        public void Clear()
+        {
+            SaveCartItems(new List<ItemModel>());
+        }
+
         public List<ItemModel> GetCartItems()
         {
             var cartItems = HttpContext.Current.Session["Cart"] as List<ItemModel>;

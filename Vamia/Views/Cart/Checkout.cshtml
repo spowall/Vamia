@@ -1,9 +1,90 @@
-﻿
+﻿@model Vamia.Models.OrderViewModel
 @{
     ViewBag.Title = "Checkout";
+
+    decimal total = 0;
+    if (Model != null)
+    {
+        total = Model.Order.Items.Select(i => i.Quantity * i.Product.Price).Sum();
+    }
 }
 
-<h2>Checkout</h2>
 
-<h5>This is where users checkout</h5>
+@if (Model.Order != null)
+{
+    <h2>Checkout - @Model.Order.OrderId</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td style="font-weight:bold">Order Id</td>
+                        <td>@Model.Order.OrderId</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Total</th>
+                        <td>@total</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Items (@Model.Order.Items.Count)</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model.Order.Items)
+                    {
+                        <tr>
+                            <td>@item.Product.Name</td>
+                            <td>@item.Quantity</td>
+                            <td>@(item.Quantity * item.Product.Price)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <form id="adviceForm" method="post" action="@Model.PaymentPage">
+                <input type="hidden" name="product_id" value="123" />
+                <input type="hidden" name="Amount" value="@(total * 100)" />
+                <input type="hidden" name="Currency" value="566" />
+                <input type="hidden" name="payment_params" value="0" />
+                <input type="hidden" name="site_redirect_url" value="@Model.ReceiptUrl" />
+                <input type="hidden" name="site_name" value="Vamia" />
+                <input type="hidden" name="cust_id" value="@Model.User.UserId" />
+                <input type="hidden" name="cust_name" value="@Model.User.Email" />
+                <input type="hidden" name="cust_name_desc" value="Customer Name" />
+                <input type="hidden" name="txn_ref" value="@Model.Reference" />
+                <input type="hidden" name="pay_item_id" value="@Model.Order.OrderId" />
+                <input type="hidden" name="pay_item_name" value="Vamia Purchase" />
+                <input type="hidden" name="hash" value="@Model.Hash" />
+
+                <button class="btn btn-primary" type="submit"><i class="fa fa-credit-card"></i>Pay</button>
+            </form>
+        </div>
+    </div>
+}
+else
+{
+
+    <div style="margin-top:300px; text-align:center">
+        <h1>No Order Created</h1>
+    </div>
+}

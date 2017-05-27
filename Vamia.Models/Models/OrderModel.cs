@@ -12,6 +12,7 @@ namespace Vamia.Models
         public DateTime DeliveryDate { get; set; }
 
         public List<ItemModel> Items { get; set; } = new List<ItemModel>();
-
+        public string UserId { get; set; }
+        public UserModel UserModel { get; set; } = new UserModel();
     }
 }

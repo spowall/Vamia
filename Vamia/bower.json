@@ -1,9 +1,0 @@
-{
-  "name": "vamia",
-  "private": true,
-  "dependencies": {
-    "lumen": "bootlumen#*",
-    "bootstrap": "^3.3.7",
-    "Font-Awesome": "^4.7.0"
-  }
-}

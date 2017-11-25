@@ -30,7 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,6 +48,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Data\Customer.cs" />
+    <Compile Include="Data\DataEntities.cs" />
+    <Compile Include="Data\Image.cs" />
+    <Compile Include="Data\Item.cs" />
+    <Compile Include="Data\Order.cs" />
+    <Compile Include="Data\Payment.cs" />
+    <Compile Include="Data\Product.cs" />
+    <Compile Include="Data\User.cs" />
+    <Compile Include="Migrations\201711251303404_InitialSchema.cs" />
+    <Compile Include="Migrations\201711251303404_InitialSchema.Designer.cs">
+      <DependentUpon>201711251303404_InitialSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711251327232_AddOrdersAndProducts.cs" />
+    <Compile Include="Migrations\201711251327232_AddOrdersAndProducts.Designer.cs">
+      <DependentUpon>201711251327232_AddOrdersAndProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711251400489_AddPayments.cs" />
+    <Compile Include="Migrations\201711251400489_AddPayments.Designer.cs">
+      <DependentUpon>201711251400489_AddPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +76,21 @@
       <Project>{55b60ce8-18b1-41e2-bfa3-28481710b161}</Project>
       <Name>Vamia.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201711251303404_InitialSchema.resx">
+      <DependentUpon>201711251303404_InitialSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711251327232_AddOrdersAndProducts.resx">
+      <DependentUpon>201711251327232_AddOrdersAndProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711251400489_AddPayments.resx">
+      <DependentUpon>201711251400489_AddPayments.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

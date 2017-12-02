@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Vamia.Web.Infrastructure;
 
 namespace Vamia.Web
 {
@@ -11,6 +12,7 @@ namespace Vamia.Web
     {
         protected void Application_Start()
         {
+            DatabaseMigrator.UpdateDatabase();
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }

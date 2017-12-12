@@ -54,26 +54,17 @@
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\Payment.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Migrations\201711251303404_InitialSchema.cs" />
-    <Compile Include="Migrations\201711251303404_InitialSchema.Designer.cs">
-      <DependentUpon>201711251303404_InitialSchema.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711251327232_AddOrdersAndProducts.cs" />
-    <Compile Include="Migrations\201711251327232_AddOrdersAndProducts.Designer.cs">
-      <DependentUpon>201711251327232_AddOrdersAndProducts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711251400489_AddPayments.cs" />
-    <Compile Include="Migrations\201711251400489_AddPayments.Designer.cs">
-      <DependentUpon>201711251400489_AddPayments.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712021223121_ChangeProductDescription.cs" />
-    <Compile Include="Migrations\201712021223121_ChangeProductDescription.Designer.cs">
-      <DependentUpon>201712021223121_ChangeProductDescription.cs</DependentUpon>
+    <Compile Include="Entities\UserRole.cs" />
+    <Compile Include="Migrations\201712091124407_InitialSchema.cs" />
+    <Compile Include="Migrations\201712091124407_InitialSchema.Designer.cs">
+      <DependentUpon>201712091124407_InitialSchema.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vamia.Domain\Vamia.Domain.csproj">
@@ -86,17 +77,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201711251303404_InitialSchema.resx">
-      <DependentUpon>201711251303404_InitialSchema.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711251327232_AddOrdersAndProducts.resx">
-      <DependentUpon>201711251327232_AddOrdersAndProducts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711251400489_AddPayments.resx">
-      <DependentUpon>201711251400489_AddPayments.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712021223121_ChangeProductDescription.resx">
-      <DependentUpon>201712021223121_ChangeProductDescription.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712091124407_InitialSchema.resx">
+      <DependentUpon>201712091124407_InitialSchema.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

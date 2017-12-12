@@ -42,11 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interface\Repositories\IProductRepository.cs" />
+    <Compile Include="Interface\Repositories\IUserRepository.cs" />
     <Compile Include="Managers\ProductManager.cs" />
+    <Compile Include="Managers\UserManager.cs" />
     <Compile Include="Models\ImageModel.cs" />
     <Compile Include="Models\ItemModel.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

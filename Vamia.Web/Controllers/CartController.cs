@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vamia.Domain.Managers;
-using Vamia.Infrastructure.Data;
+using Vamia.Infrastructure.Entities;
 using Vamia.Infrastructure.Repositories;
 using Vamia.Web.Infrastructure.Services;
 

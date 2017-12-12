@@ -1,4 +1,4 @@
-﻿namespace Vamia.Infrastructure.Data
+﻿namespace Vamia.Infrastructure.Entities
 {
     public class Item
     {

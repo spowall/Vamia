@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vamia.Infrastructure.Data
+namespace Vamia.Infrastructure.Entities
 {
     public class Customer
     {

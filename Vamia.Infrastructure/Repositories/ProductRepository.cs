@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Vamia.Domain.Interface.Repositories;
 using Vamia.Domain.Models;
-using Vamia.Infrastructure.Data;
+using Vamia.Infrastructure.Entities;
 
 namespace Vamia.Infrastructure.Repositories
 {

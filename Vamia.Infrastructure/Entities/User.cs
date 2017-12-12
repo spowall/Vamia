@@ -4,8 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vamia.Infrastructure.Entities;
 
-namespace Vamia.Infrastructure.Data
+namespace Vamia.Infrastructure.Entities
 {
     public class User
     {
@@ -16,5 +17,7 @@ namespace Vamia.Infrastructure.Data
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Image { get; set; }
+
+        public virtual ICollection<UserRole> UserRoles { get; set; } = new HashSet<UserRole>();
     }
 }

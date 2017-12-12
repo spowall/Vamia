@@ -50,10 +50,31 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Diagnostics, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Diagnostics.3.1.0\lib\net45\Microsoft.Owin.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -324,6 +345,128 @@
     <Content Include="Libs\font-awesome\scss\_screen-reader.scss" />
     <Content Include="Libs\font-awesome\scss\_stacked.scss" />
     <Content Include="Libs\font-awesome\scss\_variables.scss" />
+    <Content Include="Libs\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="Libs\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Libs\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="Libs\jquery-validation\build\release.js" />
+    <Content Include="Libs\jquery-validation\dist\additional-methods.js" />
+    <Content Include="Libs\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="Libs\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="Libs\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="Libs\jquery-validation\Gruntfile.js" />
+    <Content Include="Libs\jquery-validation\src\additional\accept.js" />
+    <Content Include="Libs\jquery-validation\src\additional\additional.js" />
+    <Content Include="Libs\jquery-validation\src\additional\alphanumeric.js" />
+    <Content Include="Libs\jquery-validation\src\additional\bankaccountNL.js" />
+    <Content Include="Libs\jquery-validation\src\additional\bankorgiroaccountNL.js" />
+    <Content Include="Libs\jquery-validation\src\additional\bic.js" />
+    <Content Include="Libs\jquery-validation\src\additional\cifES.js" />
+    <Content Include="Libs\jquery-validation\src\additional\cpfBR.js" />
+    <Content Include="Libs\jquery-validation\src\additional\creditcard.js" />
+    <Content Include="Libs\jquery-validation\src\additional\creditcardtypes.js" />
+    <Content Include="Libs\jquery-validation\src\additional\currency.js" />
+    <Content Include="Libs\jquery-validation\src\additional\dateFA.js" />
+    <Content Include="Libs\jquery-validation\src\additional\dateITA.js" />
+    <Content Include="Libs\jquery-validation\src\additional\dateNL.js" />
+    <Content Include="Libs\jquery-validation\src\additional\extension.js" />
+    <Content Include="Libs\jquery-validation\src\additional\giroaccountNL.js" />
+    <Content Include="Libs\jquery-validation\src\additional\iban.js" />
+    <Content Include="Libs\jquery-validation\src\additional\integer.js" />
+    <Content Include="Libs\jquery-validation\src\additional\ipv4.js" />
+    <Content Include="Libs\jquery-validation\src\additional\ipv6.js" />
+    <Content Include="Libs\jquery-validation\src\additional\lettersonly.js" />
+    <Content Include="Libs\jquery-validation\src\additional\letterswithbasicpunc.js" />
+    <Content Include="Libs\jquery-validation\src\additional\mobileNL.js" />
+    <Content Include="Libs\jquery-validation\src\additional\mobileUK.js" />
+    <Content Include="Libs\jquery-validation\src\additional\netmask.js" />
+    <Content Include="Libs\jquery-validation\src\additional\nieES.js" />
+    <Content Include="Libs\jquery-validation\src\additional\nifES.js" />
+    <Content Include="Libs\jquery-validation\src\additional\nipPL.js" />
+    <Content Include="Libs\jquery-validation\src\additional\notEqualTo.js" />
+    <Content Include="Libs\jquery-validation\src\additional\nowhitespace.js" />
+    <Content Include="Libs\jquery-validation\src\additional\pattern.js" />
+    <Content Include="Libs\jquery-validation\src\additional\phoneNL.js" />
+    <Content Include="Libs\jquery-validation\src\additional\phonesUK.js" />
+    <Content Include="Libs\jquery-validation\src\additional\phoneUK.js" />
+    <Content Include="Libs\jquery-validation\src\additional\phoneUS.js" />
+    <Content Include="Libs\jquery-validation\src\additional\postalcodeBR.js" />
+    <Content Include="Libs\jquery-validation\src\additional\postalCodeCA.js" />
+    <Content Include="Libs\jquery-validation\src\additional\postalcodeIT.js" />
+    <Content Include="Libs\jquery-validation\src\additional\postalcodeNL.js" />
+    <Content Include="Libs\jquery-validation\src\additional\postcodeUK.js" />
+    <Content Include="Libs\jquery-validation\src\additional\require_from_group.js" />
+    <Content Include="Libs\jquery-validation\src\additional\skip_or_fill_minimum.js" />
+    <Content Include="Libs\jquery-validation\src\additional\statesUS.js" />
+    <Content Include="Libs\jquery-validation\src\additional\strippedminlength.js" />
+    <Content Include="Libs\jquery-validation\src\additional\time.js" />
+    <Content Include="Libs\jquery-validation\src\additional\time12h.js" />
+    <Content Include="Libs\jquery-validation\src\additional\url2.js" />
+    <Content Include="Libs\jquery-validation\src\additional\vinUS.js" />
+    <Content Include="Libs\jquery-validation\src\additional\zipcodeUS.js" />
+    <Content Include="Libs\jquery-validation\src\additional\ziprange.js" />
+    <Content Include="Libs\jquery-validation\src\ajax.js" />
+    <Content Include="Libs\jquery-validation\src\core.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_ar.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_az.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_bg.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_bn_BD.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_ca.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_cs.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_da.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_de.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_el.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_es.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_es_AR.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_es_PE.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_et.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_eu.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_fa.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_fi.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_fr.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_ge.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_gl.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_he.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_hr.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_hu.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_hy_AM.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_id.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_is.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_it.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_ja.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_ka.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_kk.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_ko.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_lt.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_lv.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_mk.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_my.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_nl.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_no.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_pl.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_pt_BR.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_pt_PT.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_ro.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_ru.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_sd.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_si.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_sk.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_sl.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_sr.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_sr_lat.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_sv.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_th.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_tj.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_tr.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_uk.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_ur.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_vi.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_zh.js" />
+    <Content Include="Libs\jquery-validation\src\localization\messages_zh_TW.js" />
+    <Content Include="Libs\jquery-validation\src\localization\methods_de.js" />
+    <Content Include="Libs\jquery-validation\src\localization\methods_es_CL.js" />
+    <Content Include="Libs\jquery-validation\src\localization\methods_fi.js" />
+    <Content Include="Libs\jquery-validation\src\localization\methods_nl.js" />
+    <Content Include="Libs\jquery-validation\src\localization\methods_pt.js" />
     <Content Include="Libs\jquery\AUTHORS.txt" />
     <Content Include="Libs\jquery\dist\core.js" />
     <Content Include="Libs\jquery\dist\jquery.js" />
@@ -436,6 +579,53 @@
     <Content Include="Libs\jquery\src\var\support.js" />
     <Content Include="Libs\jquery\src\var\toString.js" />
     <Content Include="Libs\jquery\src\wrap.js" />
+    <Content Include="Libs\videojs\dist\video-js\demo.html" />
+    <Content Include="Libs\videojs\dist\video-js\font\vjs.svg" />
+    <Content Include="Libs\videojs\dist\video-js\video-js.css" />
+    <Content Include="Libs\videojs\dist\video-js\video-js.min.css" />
+    <Content Include="Libs\videojs\dist\video-js\video-js.swf" />
+    <Content Include="Libs\videojs\dist\video-js\video.dev.js" />
+    <Content Include="Libs\videojs\dist\video-js\video.js" />
+    <Content Include="Libs\videojs\Gruntfile.js" />
+    <Content Include="Libs\videojs\src\css\font\vjs.svg" />
+    <Content Include="Libs\videojs\src\js\big-play-button.js" />
+    <Content Include="Libs\videojs\src\js\button.js" />
+    <Content Include="Libs\videojs\src\js\cdn.js" />
+    <Content Include="Libs\videojs\src\js\component.js" />
+    <Content Include="Libs\videojs\src\js\control-bar\control-bar.js" />
+    <Content Include="Libs\videojs\src\js\control-bar\fullscreen-toggle.js" />
+    <Content Include="Libs\videojs\src\js\control-bar\live-display.js" />
+    <Content Include="Libs\videojs\src\js\control-bar\mute-toggle.js" />
+    <Content Include="Libs\videojs\src\js\control-bar\play-toggle.js" />
+    <Content Include="Libs\videojs\src\js\control-bar\playback-rate-menu-button.js" />
+    <Content Include="Libs\videojs\src\js\control-bar\progress-control.js" />
+    <Content Include="Libs\videojs\src\js\control-bar\time-display.js" />
+    <Content Include="Libs\videojs\src\js\control-bar\volume-control.js" />
+    <Content Include="Libs\videojs\src\js\control-bar\volume-menu-button.js" />
+    <Content Include="Libs\videojs\src\js\core-object.js" />
+    <Content Include="Libs\videojs\src\js\core.js" />
+    <Content Include="Libs\videojs\src\js\error-display.js" />
+    <Content Include="Libs\videojs\src\js\events.js" />
+    <Content Include="Libs\videojs\src\js\exports.js" />
+    <Content Include="Libs\videojs\src\js\fullscreen-api.js" />
+    <Content Include="Libs\videojs\src\js\json.js" />
+    <Content Include="Libs\videojs\src\js\lib.js" />
+    <Content Include="Libs\videojs\src\js\loading-spinner.js" />
+    <Content Include="Libs\videojs\src\js\media-error.js" />
+    <Content Include="Libs\videojs\src\js\media\flash.externs.js" />
+    <Content Include="Libs\videojs\src\js\media\flash.js" />
+    <Content Include="Libs\videojs\src\js\media\html5.js" />
+    <Content Include="Libs\videojs\src\js\media\loader.js" />
+    <Content Include="Libs\videojs\src\js\media\media.js" />
+    <Content Include="Libs\videojs\src\js\menu.js" />
+    <Content Include="Libs\videojs\src\js\player.externs.js" />
+    <Content Include="Libs\videojs\src\js\player.js" />
+    <Content Include="Libs\videojs\src\js\plugins.js" />
+    <Content Include="Libs\videojs\src\js\poster.js" />
+    <Content Include="Libs\videojs\src\js\setup.js" />
+    <Content Include="Libs\videojs\src\js\slider.js" />
+    <Content Include="Libs\videojs\src\js\tracks.js" />
+    <Content Include="Libs\videojs\src\js\util.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="bower.json" />
@@ -670,6 +860,99 @@
     <Content Include="Libs\flat-ui\less\variables.less" />
     <Content Include="Libs\flat-ui\package.json" />
     <Content Include="Libs\flat-ui\README.md" />
+    <Content Include="Libs\jquery-validation-unobtrusive\.bower.json" />
+    <Content Include="Libs\jquery-validation-unobtrusive\bower.json" />
+    <Content Include="Libs\jquery-validation\.bower.json" />
+    <Content Include="Libs\jquery-validation\bower.json" />
+    <Content Include="Libs\jquery-validation\changelog.md" />
+    <Content Include="Libs\jquery-validation\CONTRIBUTING.md" />
+    <Content Include="Libs\jquery-validation\LICENSE.md" />
+    <Content Include="Libs\jquery-validation\package.json" />
+    <Content Include="Libs\jquery-validation\README.md" />
+    <Content Include="Libs\jquery-validation\validation.jquery.json" />
+    <Content Include="Libs\videojs\.bower.json" />
+    <Content Include="Libs\videojs\bower.json" />
+    <Content Include="Libs\videojs\CHANGELOG.md" />
+    <Content Include="Libs\videojs\component.json" />
+    <Content Include="Libs\videojs\composer.json" />
+    <Content Include="Libs\videojs\contrib.json" />
+    <Content Include="Libs\videojs\CONTRIBUTING.md" />
+    <Content Include="Libs\videojs\dist\video-js\demo.captions.vtt" />
+    <Content Include="Libs\videojs\dist\video-js\font\vjs.eot" />
+    <Content Include="Libs\videojs\dist\video-js\font\vjs.ttf" />
+    <Content Include="Libs\videojs\dist\video-js\font\vjs.woff" />
+    <Content Include="Libs\videojs\dist\video-js\video-js.less" />
+    <Content Include="Libs\videojs\docs\api\vjs.BigPlayButton.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.Button.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.CaptionsButton.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.CaptionsTrack.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.ChaptersButton.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.ChaptersTrack.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.ChaptersTrackMenuItem.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.Component.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.ControlBar.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.CoreObject.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.CurrentTimeDisplay.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.DurationDisplay.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.Flash.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.FullscreenToggle.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.Html5.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.JSON.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.LoadingSpinner.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.LoadProgressBar.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.media.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.MediaLoader.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.MediaTechController.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.Menu.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.MenuButton.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.MenuItem.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.MuteToggle.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.OffTextTrackMenuItem.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.Player.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.PlayProgressBar.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.PlayToggle.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.PosterImage.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.ProgressControl.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.RemainingTimeDisplay.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.SeekBar.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.SeekHandle.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.Slider.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.SliderHandle.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.SubtitlesButton.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.SubtitlesTrack.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.TextTrack.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.TextTrackButton.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.TextTrackDisplay.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.TextTrackMenuItem.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.TimeDivider.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.VolumeBar.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.VolumeControl.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.VolumeHandle.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.VolumeLevel.md" />
+    <Content Include="Libs\videojs\docs\api\vjs.VolumeMenuButton.md" />
+    <Content Include="Libs\videojs\docs\guides\api.md" />
+    <Content Include="Libs\videojs\docs\guides\components.md" />
+    <Content Include="Libs\videojs\docs\guides\glossary.md" />
+    <Content Include="Libs\videojs\docs\guides\languages.md" />
+    <Content Include="Libs\videojs\docs\guides\options.md" />
+    <Content Include="Libs\videojs\docs\guides\plugins.md" />
+    <Content Include="Libs\videojs\docs\guides\setup.md" />
+    <Content Include="Libs\videojs\docs\guides\skins.md" />
+    <Content Include="Libs\videojs\docs\guides\tech.md" />
+    <Content Include="Libs\videojs\docs\guides\tracks.md" />
+    <Content Include="Libs\videojs\docs\index.md" />
+    <Content Include="Libs\videojs\lang\es.json" />
+    <Content Include="Libs\videojs\LICENSE" />
+    <Content Include="Libs\videojs\package.json" />
+    <Content Include="Libs\videojs\README.md" />
+    <Content Include="Libs\videojs\sandbox\index.html.example" />
+    <Content Include="Libs\videojs\sandbox\language.html.example" />
+    <Content Include="Libs\videojs\sandbox\plugin.html.example" />
+    <Content Include="Libs\videojs\src\css\font\vjs.eot" />
+    <Content Include="Libs\videojs\src\css\font\vjs.ttf" />
+    <Content Include="Libs\videojs\src\css\font\vjs.woff" />
+    <Content Include="Libs\videojs\src\css\video-js.less" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -678,15 +961,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Constants.cs" />
     <Compile Include="Infrastructure\DatabaseMigrator.cs" />
     <Compile Include="Infrastructure\Services\CartService.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
+    <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -695,6 +983,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -705,6 +994,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Cart\" />
+    <Folder Include="Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vamia.Domain\Vamia.Domain.csproj">

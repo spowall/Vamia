@@ -101,6 +101,13 @@
                                 <td><a href="@Url.Action("remove", "cart", new { id = item.ProductId })" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i>Remove</a></td>
                             </tr>
                         }
+                        <tr>
+                            <td colspan="3" class="text-right">
+                                <a href="@Url.Action("place","order")" class="btn btn-sm btn-primary">
+                                    <i class="fa fa-first-order"></i>Place Order
+                                </a>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             }

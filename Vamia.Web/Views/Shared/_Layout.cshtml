@@ -16,7 +16,7 @@
       <script src="js/vendor/html5shiv.js"></script>
       <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
-    @RenderSection("head", required:false)
+    @RenderSection("head", required: false)
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-dark bg-primary navbar-fixed-top">
@@ -33,9 +33,27 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li>
+                            <a href="@Url.Action("index", "home", new { area = "admin" })"><i class="fa fa-user-circle"></i>Admin</a>
+                        </li>
+                    }
                     <li class="active">
                         <a href="@Url.Action("index", "home")"><i class="fa fa-shopping-cart"></i>Cart</a>
                     </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>
+                            <a href="@Url.Action("logout", "account")"><i class="fa fa-sign-out"></i>Logout</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <a href="@Url.Action("login", "account")"><i class="fa fa-sign-in"></i>Login</a>
+                        </li>
+                    }
                 </ul>
             </div>
         </div>
@@ -49,6 +67,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/libs/flat-ui/dist/js/vendor/video.js"></script>
     <script src="/libs/flat-ui/dist/js/flat-ui.min.js"></script>
-    @RenderSection("scripts", required:false)
+    @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -12,5 +12,10 @@ namespace Vamia.Web
             public const string Type = "Cookie";
             public const string Path = "/account/login";
         }
+
+        public static class TempData
+        {
+            public const string Message = "Message";
+        }
     }
 }

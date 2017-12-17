@@ -61,10 +61,16 @@
     <Compile Include="Migrations\201712091124407_InitialSchema.Designer.cs">
       <DependentUpon>201712091124407_InitialSchema.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712161410212_ChangePasswordToPasswordHash.cs" />
+    <Compile Include="Migrations\201712161410212_ChangePasswordToPasswordHash.Designer.cs">
+      <DependentUpon>201712161410212_ChangePasswordToPasswordHash.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Utilities\MD5Encryption.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vamia.Domain\Vamia.Domain.csproj">
@@ -79,6 +85,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712091124407_InitialSchema.resx">
       <DependentUpon>201712091124407_InitialSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712161410212_ChangePasswordToPasswordHash.resx">
+      <DependentUpon>201712161410212_ChangePasswordToPasswordHash.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

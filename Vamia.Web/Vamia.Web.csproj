@@ -953,6 +953,7 @@
     <Content Include="Libs\videojs\src\css\font\vjs.ttf" />
     <Content Include="Libs\videojs\src\css\font\vjs.woff" />
     <Content Include="Libs\videojs\src\css\video-js.less" />
+    <Content Include="Areas\Admin\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -961,6 +962,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -973,6 +976,7 @@
     <Compile Include="Infrastructure\Services\CartService.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -984,6 +988,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Order\Place.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -993,8 +999,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Home\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Views\Cart\" />
-    <Folder Include="Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vamia.Domain\Vamia.Domain.csproj">

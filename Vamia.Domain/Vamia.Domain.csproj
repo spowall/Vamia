@@ -41,19 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\Repositories\IOrderRepository.cs" />
     <Compile Include="Interface\Repositories\IProductRepository.cs" />
     <Compile Include="Interface\Repositories\IUserRepository.cs" />
+    <Compile Include="Interface\Utility\IEncryption.cs" />
+    <Compile Include="Managers\OrderManager.cs" />
     <Compile Include="Managers\ProductManager.cs" />
     <Compile Include="Managers\UserManager.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\ImageModel.cs" />
     <Compile Include="Models\ItemModel.cs" />
     <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\OrderModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interface\Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

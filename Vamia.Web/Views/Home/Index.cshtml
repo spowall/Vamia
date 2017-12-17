@@ -52,7 +52,7 @@
 <div class="container-fluid">
 
 
-    @if (TempData["message"] != null)
+    @if (TempData[Constants.TempData.Message] != null)
     {
         <div style="margin-top:10px;"
              class="alert alert-danger alert-dismissible fade in" role="alert">
@@ -103,9 +103,12 @@
                         }
                         <tr>
                             <td colspan="3" class="text-right">
-                                <a href="@Url.Action("place","order")" class="btn btn-sm btn-primary">
-                                    <i class="fa fa-first-order"></i>Place Order
-                                </a>
+                                <form action="@Url.Action("place","order")" method="post">
+                                    <button type="submit" class="btn btn-sm btn-primary">
+                                        <i class="fa fa-first-order"></i>Place Order
+                                    </button>
+                                </form>
+
                             </td>
                         </tr>
                     </tbody>

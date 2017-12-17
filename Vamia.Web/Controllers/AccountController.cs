@@ -6,8 +6,10 @@ using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
 using Vamia.Domain.Managers;
+using Vamia.Domain.Models;
 using Vamia.Infrastructure.Entities;
 using Vamia.Infrastructure.Repositories;
+using Vamia.Infrastructure.Utilities;
 using Vamia.Web.Models;
 
 namespace Vamia.Web.Controllers
@@ -18,17 +20,19 @@ namespace Vamia.Web.Controllers
 
         public AccountController()
         {
-            _user = new UserManager(new UserRepository(new DataEntities()));
+            _user = new UserManager(new UserRepository(new DataEntities()), new MD5Encryption());
         }
 
         // GET: Account
         public ActionResult Login()
         {
+            Authentication.SignOut();
             return View();
         }
 
+        public IAuthenticationManager Authentication => HttpContext.GetOwinContext().Authentication;
 
-        [HttpPost, ValidateAntiForgeryToken]
+        [HttpPost]
         public ActionResult Login(LoginViewModel model, string returnUrl)
         {
             if (ModelState.IsValid)
@@ -36,8 +40,6 @@ namespace Vamia.Web.Controllers
                 var user = _user.Login(model.Email, model.Password);
                 if (user != null)
                 {
-                    var auth = HttpContext.GetOwinContext().Authentication;
-
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Email,user.Email),    //Email
@@ -57,7 +59,7 @@ namespace Vamia.Web.Controllers
 
                     //Sign In the User based on the Identity created
                     var property = new AuthenticationProperties { IsPersistent = model.RememberMe };
-                    auth.SignIn(property, identity);
+                    Authentication.SignIn(property, identity);
 
 
                     //Redirect User Back
@@ -70,6 +72,46 @@ namespace Vamia.Web.Controllers
             }
 
             ModelState.AddModelError("Invalid Login", "Invalid Username or Password");
+            return View(model);
+        }
+
+        public ActionResult Logout()
+        {
+            Authentication.SignOut();
+            return RedirectToAction("index","home");
+        }
+
+        
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Register(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var user = new UserModel
+                    {
+                        Email = model.Email,
+                        FirstName = model.FirstName,
+                        LastName = model.LastName,
+                    };
+
+                    //Register User
+                    _user.RegisterUser(user, model.Password);
+
+                    //Return to Login Page
+                    return RedirectToAction("login");
+                }
+                catch(Exception ex)
+                {
+                    ModelState.AddModelError("RegistrationError", ex);
+                }
+            }
             return View(model);
         }
     }

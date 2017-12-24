@@ -18,9 +18,9 @@ namespace Vamia.Web.Controllers
     {
         private UserManager _user;
 
-        public AccountController()
+        public AccountController(UserManager user)
         {
-            _user = new UserManager(new UserRepository(new DataEntities()), new MD5Encryption());
+            _user = user;
         }
 
         // GET: Account

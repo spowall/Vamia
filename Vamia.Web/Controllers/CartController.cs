@@ -15,11 +15,10 @@ namespace Vamia.Web.Controllers
         private ProductManager _product;
         private CartService _cart;
 
-        public CartController()
+        public CartController(CartService cart, ProductManager product)
         {
-            var productRepo = new ProductRepository(new DataEntities());
-            _product = new ProductManager(productRepo);
-            _cart = new CartService();
+            _product = product;
+            _cart = cart;
         }
 
         // GET: Cart

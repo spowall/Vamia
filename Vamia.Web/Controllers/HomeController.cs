@@ -16,12 +16,10 @@ namespace Vamia.Web.Controllers
         private ProductManager _product;
         private CartService _cart;
 
-        public HomeController()
+        public HomeController(ProductManager product, CartService cart)
         {
-            var productRepo = new ProductRepository(new DataEntities());
-            _product = new ProductManager(productRepo);
-
-            _cart = new CartService();
+            _product = product;
+            _cart = cart;
         }
         // GET: Home
         public ActionResult Index()
@@ -32,6 +30,16 @@ namespace Vamia.Web.Controllers
                 Cart = _cart.GetCartItems()
             };
             return View(model);
+        }
+
+        public ActionResult ActionA()
+        {
+            return RedirectToAction("ActionB", new { id = 2, type = "z" });
+        }
+
+        public ActionResult ActionB(string type, int id = 0)
+        {
+            return Content($"Id = {id} and type = {type}");
         }
     }
 }

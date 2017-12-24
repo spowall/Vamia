@@ -17,10 +17,10 @@ namespace Vamia.Web.Controllers
         private CartService _cart;
         private OrderManager _order;
 
-        public OrderController()
+        public OrderController(CartService cart, OrderManager order)
         {
-            _cart = new CartService();
-            _order = new OrderManager(new OrderRepository(new DataEntities()));
+            _cart = cart;
+            _order = order;
         }
 
         public ActionResult Place()

@@ -33,7 +33,10 @@ namespace Vamia.Domain.Managers
 
             //Check if User Exists
             var user = _userRepo.GetUser(model.Email);
-            if (user != null) throw new Exception($"Email ({model.Email}) already exists");
+            if (user != null)
+            {
+                throw new Exception($"Email ({model.Email}) already exists");
+            }
 
             //Create User (We are sure user == null here)
             user = _userRepo.Create(model);

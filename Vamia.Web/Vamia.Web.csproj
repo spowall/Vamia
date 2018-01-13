@@ -998,6 +998,8 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Order\Place.cshtml" />
+    <Content Include="Views\Shared\_Cart.cshtml" />
+    <Content Include="Views\Cart\Button.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1010,7 +1012,6 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Home\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Views\Cart\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vamia.Domain\Vamia.Domain.csproj">

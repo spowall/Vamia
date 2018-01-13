@@ -39,9 +39,7 @@
                             <a href="@Url.Action("index", "home", new { area = "admin" })"><i class="fa fa-user-circle"></i>Admin</a>
                         </li>
                     }
-                    <li class="active">
-                        <a href="@Url.Action("index", "home")"><i class="fa fa-shopping-cart"></i>Cart</a>
-                    </li>
+                    @Html.Action("button","cart")
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li>

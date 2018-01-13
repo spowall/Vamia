@@ -59,5 +59,12 @@ namespace Vamia.Web.Controllers
 
             return RedirectToAction("index", "home");
         }
+
+        [ChildActionOnly]
+        public ActionResult Button()
+        {
+            var items = _cart.GetCartItems();
+            return PartialView(items);
+        }
     }
 }

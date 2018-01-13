@@ -1,0 +1,42 @@
+﻿@model List<ItemModel>
+
+
+<h4><i class="fa fa-shopping-cart"></i>Cart</h4>
+<hr />
+@if (Model != null && Model.Any())
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th class="text-right">Quantity</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Quantity</td>
+                    <td><a href="@Url.Action("remove", "cart", new { id = item.ProductId })" class="btn btn-xs btn-danger"><i class="fa fa-remove"></i>Remove</a></td>
+                </tr>
+            }
+            <tr>
+                <td colspan="3" class="text-right">
+                    <form action="@Url.Action("place","order")" method="post">
+                        <button type="submit" class="btn btn-sm btn-primary">
+                            <i class="fa fa-first-order"></i>Place Order
+                        </button>
+                    </form>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="empty">You have no Items in your shopping Cart</div>
+}

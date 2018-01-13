@@ -1,0 +1,10 @@
+﻿@model List<ItemModel>
+
+@if (Model != null && Model.Any())
+{
+
+    var count = Model.Sum(i => i.Quantity);
+    <li class="active">
+        <a href="@Url.Action("index", "home")"><i class="fa fa-shopping-cart"></i>Cart (@count)</a>
+    </li>
+}
